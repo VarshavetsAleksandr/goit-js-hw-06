@@ -21,6 +21,9 @@ function createBoxes() {
     const str = `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()}"></div>`;
     boxesArray.push(str);
   }
+  // видаляємо попередньо додані елементи, при натисканні кнопки Create
+  elements.list.innerHTML = "";
+  // додаємо нові елементи
   elements.list.insertAdjacentHTML("beforeend", boxesArray.join(""));
 }
 
